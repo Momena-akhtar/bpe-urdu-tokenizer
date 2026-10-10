@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# corpus, caches and artefacts are shared through the drive link, never committed
+data/
+*.bin
+uv.lock

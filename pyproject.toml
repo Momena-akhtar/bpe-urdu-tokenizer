@@ -1,0 +1,43 @@
+[project]
+name = "urdu-bpe"
+version = "0.1.0"
+description = "Urdu byte-level BPE tokenizer from scratch (CS417 Assignment 1): corpus collection, cleaning, tokenizer, analysis"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "regex>=2024.0",
+    "numpy>=1.26",
+    "tqdm>=4.66",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.10", "types-requests", "types-beautifulsoup4", "types-tqdm"]
+# Part C only: allowed for comparison, never imported by the implementation.
+analysis = ["tiktoken>=0.7", "tokenizers>=0.20", "matplotlib>=3.8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/urdu_bpe"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "usage", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]  # the formatter wraps code; long strings, URLs and docstrings are left alone
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
