@@ -51,9 +51,9 @@ FORMAT = "urdu-bpe-1"
 
 PRETOKENIZE_PATTERN = (
     r"(?i:'s|'t|'re|'ve|'m|'ll|'d)"
-    r"| ?[\p{L}\p{M}‌‍]+"
+    r"| ?[\p{L}\p{M}\u200c\u200d]+"
     r"| ?\p{N}+"
-    r"| ?[^\s\p{L}\p{M}\p{N}‌‍]+"
+    r"| ?[^\s\p{L}\p{M}\p{N}\u200c\u200d]+"
     r"|\s+(?!\S)|\s+"
 )
 

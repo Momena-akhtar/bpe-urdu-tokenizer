@@ -33,9 +33,9 @@ TRICKY = [
     "اردو",
     " اردو ",
     "أُردُو",
-    "ہو‌گئی",
-    "ہو‍گئی",
-    "‎اردو‏",
+    "ہو\u200cگئی",
+    "ہو\u200dگئی",
+    "\u200eاردو\u200f",
     "٢٠٢٤ ۲۰۲۴ 2024",
     "پاکستان، لاہور۔ کیا؟ ہاں!",
     "ایک iPhone اور Google",
@@ -78,9 +78,9 @@ def test_lossless(tok: BPETokenizer, text: str):
 
 def test_lossless_fuzz(tok: BPETokenizer):
     rng = random.Random(0)
-    alphabet = list("ابپتٹثجچحخدڈذرڑزسشصضطظعغفقکگلمنںوہھءیے ۔،؟!.,0123456789٠١٢ \n\t‌َّaZé😀") + [
-        "<|endoftext|>"
-    ]
+    alphabet = list(
+        "ابپتٹثجچحخدڈذرڑزسشصضطظعغفقکگلمنںوہھءیے ۔،؟!.,0123456789٠١٢ \n\t\u200cَّaZé😀"
+    ) + ["<|endoftext|>"]
     for _ in range(300):
         text = "".join(rng.choice(alphabet) for _ in range(rng.randrange(0, 80)))
         assert tok.decode(tok.encode(text)) == text
@@ -92,7 +92,7 @@ def test_urdu_words_stay_whole_where_gpt2_cuts_them():
     word = "أُردُو"
     assert ours.findall(word) == [word]
     assert len(gpt2.findall(word)) > 1  # the failure the assignment describes
-    assert ours.findall("ہو‌گئی") == ["ہو‌گئی"]  # ZWNJ does not split a word
+    assert ours.findall("ہو\u200cگئی") == ["ہو\u200cگئی"]  # ZWNJ does not split a word
     assert ours.findall("کتاب۔ اردو،") == ["کتاب", "۔", " اردو", "،"]
     assert ours.findall("a  b") == ["a", " ", " b"]  # last space attaches to the next word
     assert ours.findall("year 2024!") == ["year", " 2024", "!"]

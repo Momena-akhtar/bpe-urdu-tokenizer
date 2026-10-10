@@ -92,6 +92,6 @@ def test_word_count_cache(tmp_path: Path):
 
 def test_random_unicode_fast_equals_reference():
     rng = random.Random(11)
-    alphabet = list("ابپتٹجچحخدڈرزسشعغفقکگلمنوہیے ۔،\n\t0123456789aeiou😀َ‌")
+    alphabet = list("ابپتٹجچحخدڈرزسشعغفقکگلمنوہیے ۔،\n\t0123456789aeiou😀َ\u200c")
     text = "".join(rng.choice(alphabet) for _ in range(4000))
     assert train_reference(text, 80) == train_fast(count_words_text(text), 80)

@@ -21,7 +21,7 @@ def test_inline_tags_do_not_split_words():
 
 
 def test_tidy_lines_keeps_content_untouched():
-    assert tidy_lines("  الف \n\n \n ب‌ ج ") == "الف\nب‌ ج"  # ZWNJ is not stripped here
+    assert tidy_lines("  الف \n\n \n ب\u200c ج ") == "الف\nب\u200c ج"  # ZWNJ is not stripped here
 
 
 def test_ocr_noise_is_rejected_but_prose_and_poetry_pass():

@@ -60,7 +60,7 @@ def _build(tmp_path: Path) -> tuple[Path, Path]:
     news = [_doc(rng) + "\n" + boiler for _ in range(300)]
     news.append(news[5])  # exact duplicate document
     news.append("ٹھیک ہے")  # too short
-    news.append("كتاب‌ـ ٢٠٢٤ " + _doc(rng))  # needs normalising
+    news.append("كتاب\u200cـ ٢٠٢٤ " + _doc(rng))  # needs normalising
     wiki = [_doc(rng) for _ in range(60)]  # < 200 docs: goes entirely to train
     wiki.append(news[9].split("\n")[0] + "\n" + _doc(rng))  # shares a paragraph (<120 chars: kept)
     raw = tmp_path / "raw"
@@ -88,7 +88,7 @@ def test_pipeline_end_to_end(tmp_path: Path):
     # cleaning effects
     everything = "".join(parts.values())
     assert "مزید پڑھیں خبریں سب سے پہلے یہاں" not in everything  # boilerplate (300 docs)
-    assert "‌" not in everything and "٢" not in everything and "ك" not in everything
+    assert "\u200c" not in everything and "٢" not in everything and "ك" not in everything
     assert "کتاب 2024" in everything
     drops = report["stage2"]["ary_urdu"]["drops"]
     assert drops["duplicate_doc"][0] == 1 and drops["too_short_doc"][0] >= 1

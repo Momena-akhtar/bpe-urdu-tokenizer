@@ -18,7 +18,7 @@ Decisions the assignment leaves open, and why:
 
 * **Digits -> ASCII 0-9.** Modern Urdu web text mixes Arabic-Indic, Persian and ASCII digits; the
   ASCII form dominates in the news corpus and gives numbers one spelling to learn.
-* **ZWNJ (U+200C) -> removed.** It is typed inconsistently, so "ہوگئی" and "ہو‌گئی" are the same
+* **ZWNJ (U+200C) -> removed.** It is typed inconsistently, so "ہوگئی" and "ہو\u200cگئی" are the same
   word spelled two ways; deleting it merges those variants instead of doubling the vocabulary. The
   tokenizer's pre-tokenizer still tolerates ZWNJ, so un-normalised text is handled losslessly.
 * **Diacritics (harakat U+064B-0652, U+0670) are kept.** They are real text in poetry and religious
@@ -34,7 +34,7 @@ import re
 import unicodedata
 from collections import Counter
 
-ZWNJ = "‌"
+ZWNJ = "\u200c"
 
 # --------------------------------------------------------------------------- the rule table
 # (rule name, description, {source code point: replacement}); replacement "" deletes.

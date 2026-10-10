@@ -15,8 +15,8 @@ def test_letter_variants_map_to_urdu_forms():
 
 def test_tatweel_zwnj_and_invisibles_removed():
     assert normalize("ســـلام") == "سلام"
-    assert normalize("ہو‌گئی") == "ہوگئی"
-    assert normalize("﻿اردو‎‏​‍") == "اردو"
+    assert normalize("ہو\u200cگئی") == "ہوگئی"
+    assert normalize("\ufeffاردو\u200e\u200f\u200b\u200d") == "اردو"
 
 
 def test_digits_become_ascii():
@@ -46,7 +46,7 @@ def test_diacritics_kept_quranic_marks_dropped_duplicates_collapsed():
 
 
 def test_idempotent_on_adversarial_strings():
-    alphabet = list("ايكهةىـ‌‍‎ھہًَٓا آ\n\t\r٠١٢۰۱۲abc 😀ﷲﺍۖ.،")
+    alphabet = list("ايكهةىـ\u200c\u200d\u200eھہًَٓا آ\n\t\r٠١٢۰۱۲abc 😀ﷲﺍۖ.،")
     rng = random.Random(0)
     for _ in range(500):
         text = "".join(rng.choice(alphabet) for _ in range(rng.randrange(0, 40)))
@@ -55,7 +55,7 @@ def test_idempotent_on_adversarial_strings():
 
 
 def test_rule_hits_counts_rewritten_characters():
-    hits = rule_hits("كتابـ ٢٠ ‌ﷲ")
+    hits = rule_hits("كتابـ ٢٠ \u200cﷲ")
     assert hits["arabic_kaf"] == 1 and hits["tatweel"] == 1 and hits["arabic_indic_digits"] == 2
     assert hits["zwnj"] == 1 and hits["presentation_forms"] == 1
     assert set(hits) <= set(RULES) | {"presentation_forms"}
