@@ -93,7 +93,7 @@ def _bump(table: dict[str, list[int]], key: str, docs_or_lines: int, nbytes: int
     entry[1] += nbytes
 
 
-# --------------------------------------------------------------------------- stage 1
+# stage 1
 def stage1_source(raw_dir: str, out_dir: str, name: str, force: bool = False) -> dict:
     raw = Path(raw_dir) / name / "docs.jsonl"
     stage = Path(out_dir) / "stage1"
@@ -183,7 +183,7 @@ def stage1_source(raw_dir: str, out_dir: str, name: str, force: bool = False) ->
     return stats
 
 
-# --------------------------------------------------------------------------- stage 2
+# stage 2
 def boilerplate_hashes(stage_dir: Path, names: list[str], cfg: CleanConfig) -> set[int]:
     """Hashes of lines repeated across many documents (menus, share buttons, sign-offs)."""
     arrays = [np.load(stage_dir / f"{n}.npy") for n in names]
@@ -281,7 +281,7 @@ def stage2(out_dir: Path, names: list[str], cfg: CleanConfig) -> tuple[list[dict
     return index, per_source
 
 
-# --------------------------------------------------------------------------- stage 3
+# stage 3
 def assign_splits(index: list[dict], cfg: CleanConfig) -> dict[str, list[int]]:
     """Split by document, stratified by source so val/test contain every genre.
 
@@ -356,7 +356,7 @@ def _bytes_by(index: list[dict], members: list[int], key: str) -> dict[str, int]
     return dict(out)
 
 
-# --------------------------------------------------------------------------- driver
+# driver
 def summarize_steps(stage1: dict[str, dict], stage2_stats: dict[str, dict]) -> list[dict]:
     """The data card's cleaning-step table: what each step removed, in order."""
 

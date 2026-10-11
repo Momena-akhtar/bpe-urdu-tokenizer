@@ -47,7 +47,7 @@ class Collector(ABC):
         self.exhausted = False  # set when the source ran out of documents before the target
         self._last_progress = 0.0
 
-    # ------------------------------------------------------------------ helpers for subclasses
+    # helpers for subclasses
     @property
     def state_path(self) -> Path:
         return self.dir / "state.json"
@@ -79,7 +79,7 @@ class Collector(ABC):
             self.session.requests,
         )
 
-    # ------------------------------------------------------------------ template
+    # template
     @abstractmethod
     def collect(self, writer: DocWriter) -> None:
         """Write documents until ``writer.full`` or the source is exhausted."""

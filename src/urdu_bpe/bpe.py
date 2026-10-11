@@ -106,7 +106,7 @@ class BPETokenizer:
         self._cache: dict[bytes, tuple[int, ...]] = {}
         self._cache_limit = cache_limit
 
-    # ------------------------------------------------------------------ properties
+    # properties
     @property
     def vocab_size(self) -> int:
         return len(self.vocab)
@@ -124,7 +124,7 @@ class BPETokenizer:
             return False
         return True
 
-    # ------------------------------------------------------------------ encoding
+    # encoding
     def pretokenize(self, text: str) -> list[str]:
         return self._regex.findall(text)
 
@@ -168,7 +168,7 @@ class BPETokenizer:
                 out.extend(self.encode_ordinary(part))
         return out
 
-    # ------------------------------------------------------------------ decoding
+    # decoding
     def decode_bytes(self, ids: Iterable[int]) -> bytes:
         vocab, n = self.vocab, len(self.vocab)
         parts = []
@@ -185,7 +185,7 @@ class BPETokenizer:
         except UnicodeDecodeError:  # an arbitrary id list can end mid-character
             return data.decode("utf-8", errors="replace")
 
-    # ------------------------------------------------------------------ persistence
+    # persistence
     def save(self, path: str | Path) -> None:
         """Write the tokenizer as JSON: header fields, then one ``[left, right]`` id pair per line."""
         header = {

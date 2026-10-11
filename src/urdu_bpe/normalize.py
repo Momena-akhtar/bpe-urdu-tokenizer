@@ -36,7 +36,7 @@ from collections import Counter
 
 ZWNJ = "\u200c"
 
-# --------------------------------------------------------------------------- the rule table
+# the rule table
 # (rule name, description, {source code point: replacement}); replacement "" deletes.
 
 

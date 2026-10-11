@@ -70,7 +70,7 @@ def main() -> None:
     counts_meta = args.out_dir / "word_counts.meta.json"
     checkpoint = args.out_dir / "merges.partial.json"
 
-    # ---- phase 1: word counts
+    # phase 1: word counts
     counts = None if args.fresh else load_word_counts(counts_path, signature)
     if counts is not None:
         count_seconds = json.loads(counts_meta.read_text())["seconds"]
@@ -98,7 +98,7 @@ def main() -> None:
         counts_meta.write_text(json.dumps({"seconds": round(count_seconds, 1)}))
     word_tokens = sum(counts.values())
 
-    # ---- phase 2: merges (resume from checkpoint when the input is unchanged)
+    # phase 2: merges (resume from checkpoint when the input is unchanged)
     forced: list[tuple[int, int]] = []
     if checkpoint.exists() and not args.fresh:
         saved = json.loads(checkpoint.read_text())
@@ -126,7 +126,7 @@ def main() -> None:
             f"only {len(merges)} merges were possible (needed {num_merges}): the corpus is too small"
         )
 
-    # ---- phase 3: save and self-check
+    # phase 3: save and self-check
     tokenizer = BPETokenizer(merges)
     out = args.out_dir / "tokenizer.json"
     tokenizer.save(out)

@@ -32,7 +32,7 @@ from urdu_bpe.chunking import chunk_ranges, read_range
 MergeCallback = Callable[[int, tuple[int, int], int, bytes], None]  # step, pair, count, new token
 
 
-# --------------------------------------------------------------------------- word counting
+# word counting
 def count_words_text(text: str, pattern: str = PRETOKENIZE_PATTERN) -> Counter[bytes]:
     """Frequency of every pre-token (as UTF-8 bytes). ``<|endoftext|>`` is split out first so it is
     never counted and never joins a merge."""
@@ -92,7 +92,7 @@ def load_word_counts(path: Path, signature: dict) -> Counter[bytes] | None:
     return Counter(blob["counts"]) if blob["signature"] == signature else None
 
 
-# --------------------------------------------------------------------------- stage 1: reference
+# stage 1: reference
 def train_reference(
     text: str,
     num_merges: int,
@@ -122,7 +122,7 @@ def train_reference(
     return merges
 
 
-# --------------------------------------------------------------------------- stage 2: fast
+# stage 2: fast
 class _PairKey:
     """Heap key that makes the *greatest* (bytes_left, bytes_right, left, right) pop first among
     equal counts (heapq is a min-heap, so the comparison is reversed)."""

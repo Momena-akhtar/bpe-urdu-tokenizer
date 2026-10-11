@@ -68,7 +68,7 @@ class PoliteSession:
         if evidence_dir:
             (evidence_dir / "robots").mkdir(parents=True, exist_ok=True)
 
-    # ------------------------------------------------------------------ robots.txt
+    # robots.txt
     def _origin(self, url: str) -> str:
         parts = urlsplit(url)
         return f"{parts.scheme}://{parts.netloc}"
@@ -115,7 +115,7 @@ class PoliteSession:
         declared = self.robots(url).crawl_delay(self.user_agent) or 0.0
         return max(self.min_delay, declared)
 
-    # ------------------------------------------------------------------ requests
+    # requests
     def _throttle(self, host: str, delay: float) -> None:
         with self._lock:
             now = time.monotonic()
@@ -198,7 +198,7 @@ class PoliteSession:
             raise FetchError(f"{url}: HTTP {resp.status_code}")
         return resp.json()
 
-    # ------------------------------------------------------------------ big files
+    # big files
     def stream_cached(
         self, url: str, cache: Path, *, chunk_size: int = 1 << 18, check_robots: bool = False
     ) -> Iterator[bytes]:
