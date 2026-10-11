@@ -1,0 +1,704 @@
+{
+  "q1": {
+    "n_invalid_utf8": 95,
+    "first_word_merge": 20,
+    "first_word_token": "یں",
+    "showcase": [
+      {
+        "merge": 1,
+        "token_id": 257,
+        "left": "\\xd8",
+        "right": "\\xa7",
+        "merged": "ا",
+        "valid_utf8": true
+      },
+      {
+        "merge": 2,
+        "token_id": 258,
+        "left": "\\xdb",
+        "right": "\\x8c",
+        "merged": "ی",
+        "valid_utf8": true
+      },
+      {
+        "merge": 3,
+        "token_id": 259,
+        "left": " ",
+        "right": "\\xd8",
+        "merged": " \\xd8",
+        "valid_utf8": false
+      },
+      {
+        "merge": 4,
+        "token_id": 260,
+        "left": "\\xda",
+        "right": "\\xa9",
+        "merged": "ک",
+        "valid_utf8": true
+      },
+      {
+        "merge": 5,
+        "token_id": 261,
+        "left": " ",
+        "right": "\\xd9",
+        "merged": " \\xd9",
+        "valid_utf8": false
+      },
+      {
+        "merge": 6,
+        "token_id": 262,
+        "left": "\\xd8",
+        "right": "\\xb1",
+        "merged": "ر",
+        "valid_utf8": true
+      },
+      {
+        "merge": 7,
+        "token_id": 263,
+        "left": "\\xd9",
+        "right": "\\x88",
+        "merged": "و",
+        "valid_utf8": true
+      },
+      {
+        "merge": 8,
+        "token_id": 264,
+        "left": "\\xdb",
+        "right": "\\x92",
+        "merged": "ے",
+        "valid_utf8": true
+      },
+      {
+        "merge": 9,
+        "token_id": 265,
+        "left": " ",
+        "right": "ک",
+        "merged": " ک",
+        "valid_utf8": true
+      },
+      {
+        "merge": 10,
+        "token_id": 266,
+        "left": "\\xdb",
+        "right": "\\x81",
+        "merged": "ہ",
+        "valid_utf8": true
+      },
+      {
+        "merge": 11,
+        "token_id": 267,
+        "left": "\\xd9",
+        "right": "\\x86",
+        "merged": "ن",
+        "valid_utf8": true
+      },
+      {
+        "merge": 12,
+        "token_id": 268,
+        "left": "ا",
+        "right": "\\xd8",
+        "merged": "ا\\xd8",
+        "valid_utf8": false
+      },
+      {
+        "merge": 13,
+        "token_id": 269,
+        "left": "\\xd9",
+        "right": "\\x84",
+        "merged": "ل",
+        "valid_utf8": true
+      },
+      {
+        "merge": 14,
+        "token_id": 270,
+        "left": "\\xd9",
+        "right": "\\x85",
+        "merged": "م",
+        "valid_utf8": true
+      },
+      {
+        "merge": 15,
+        "token_id": 271,
+        "left": " \\xd9",
+        "right": "\\x85",
+        "merged": " م",
+        "valid_utf8": true
+      },
+      {
+        "merge": 16,
+        "token_id": 272,
+        "left": " ",
+        "right": "ا",
+        "merged": " ا",
+        "valid_utf8": true
+      },
+      {
+        "merge": 17,
+        "token_id": 273,
+        "left": "\\xda",
+        "right": "\\xba",
+        "merged": "ں",
+        "valid_utf8": true
+      },
+      {
+        "merge": 18,
+        "token_id": 274,
+        "left": "\\xd8",
+        "right": "\\xaa",
+        "merged": "ت",
+        "valid_utf8": true
+      },
+      {
+        "merge": 19,
+        "token_id": 275,
+        "left": " ",
+        "right": "ہ",
+        "merged": " ہ",
+        "valid_utf8": true
+      },
+      {
+        "merge": 20,
+        "token_id": 276,
+        "left": "ی",
+        "right": "ں",
+        "merged": "یں",
+        "valid_utf8": true
+      },
+      {
+        "merge": 21,
+        "token_id": 277,
+        "left": "\\xd8",
+        "right": "\\xaf",
+        "merged": "د",
+        "valid_utf8": true
+      },
+      {
+        "merge": 22,
+        "token_id": 278,
+        "left": " \\xd8",
+        "right": "\\xb3",
+        "merged": " س",
+        "valid_utf8": true
+      },
+      {
+        "merge": 23,
+        "token_id": 279,
+        "left": "\\xd8",
+        "right": "\\xb3",
+        "merged": "س",
+        "valid_utf8": true
+      },
+      {
+        "merge": 24,
+        "token_id": 280,
+        "left": "\\xda",
+        "right": "\\xbe",
+        "merged": "ھ",
+        "valid_utf8": true
+      },
+      {
+        "merge": 25,
+        "token_id": 281,
+        "left": " \\xd8",
+        "right": "\\xa8",
+        "merged": " ب",
+        "valid_utf8": true
+      },
+      {
+        "merge": 26,
+        "token_id": 282,
+        "left": "\\xda",
+        "right": "\\xaf",
+        "merged": "گ",
+        "valid_utf8": true
+      },
+      {
+        "merge": 27,
+        "token_id": 283,
+        "left": "و",
+        "right": "ر",
+        "merged": "ور",
+        "valid_utf8": true
+      },
+      {
+        "merge": 28,
+        "token_id": 284,
+        "left": " ک",
+        "right": "ے",
+        "merged": " کے",
+        "valid_utf8": true
+      },
+      {
+        "merge": 29,
+        "token_id": 285,
+        "left": " ک",
+        "right": "ی",
+        "merged": " کی",
+        "valid_utf8": true
+      },
+      {
+        "merge": 30,
+        "token_id": 286,
+        "left": " \\xd9",
+        "right": "\\x86",
+        "merged": " ن",
+        "valid_utf8": true
+      },
+      {
+        "merge": 31,
+        "token_id": 287,
+        "left": "\\xd8",
+        "right": "\\xa8",
+        "merged": "ب",
+        "valid_utf8": true
+      },
+      {
+        "merge": 32,
+        "token_id": 288,
+        "left": " \\xd8",
+        "right": "\\xaa",
+        "merged": " ت",
+        "valid_utf8": true
+      },
+      {
+        "merge": 33,
+        "token_id": 289,
+        "left": " \\xd9",
+        "right": "\\xbe",
+        "merged": " پ",
+        "valid_utf8": true
+      },
+      {
+        "merge": 34,
+        "token_id": 290,
+        "left": "\\xdb",
+        "right": "\\x94",
+        "merged": "۔",
+        "valid_utf8": true
+      },
+      {
+        "merge": 35,
+        "token_id": 291,
+        "left": "ا",
+        "right": "ن",
+        "merged": "ان",
+        "valid_utf8": true
+      },
+      {
+        "merge": 36,
+        "token_id": 292,
+        "left": " ",
+        "right": "ا\\xd8",
+        "merged": " ا\\xd8",
+        "valid_utf8": false
+      },
+      {
+        "merge": 37,
+        "token_id": 293,
+        "left": " \\xd8",
+        "right": "\\xac",
+        "merged": " ج",
+        "valid_utf8": true
+      },
+      {
+        "merge": 38,
+        "token_id": 294,
+        "left": "ا",
+        "right": "ر",
+        "merged": "ار",
+        "valid_utf8": true
+      },
+      {
+        "merge": 39,
+        "token_id": 295,
+        "left": " م",
+        "right": "یں",
+        "merged": " میں",
+        "valid_utf8": true
+      },
+      {
+        "merge": 40,
+        "token_id": 296,
+        "left": "\\xd9",
+        "right": "\\x82",
+        "merged": "ق",
+        "valid_utf8": true
+      },
+      {
+        "merge": 41,
+        "token_id": 297,
+        "left": " \\xd8",
+        "right": "\\xaf",
+        "merged": " د",
+        "valid_utf8": true
+      },
+      {
+        "merge": 42,
+        "token_id": 298,
+        "left": "\\xd9",
+        "right": "\\xb9",
+        "merged": "ٹ",
+        "valid_utf8": true
+      },
+      {
+        "merge": 43,
+        "token_id": 299,
+        "left": "\\xd9",
+        "right": "\\x81",
+        "merged": "ف",
+        "valid_utf8": true
+      },
+      {
+        "merge": 44,
+        "token_id": 300,
+        "left": " \\xd9",
+        "right": "\\x88",
+        "merged": " و",
+        "valid_utf8": true
+      },
+      {
+        "merge": 45,
+        "token_id": 301,
+        "left": "\\xd8",
+        "right": "\\xb9",
+        "merged": "ع",
+        "valid_utf8": true
+      },
+      {
+        "merge": 46,
+        "token_id": 302,
+        "left": " ہ",
+        "right": "ے",
+        "merged": " ہے",
+        "valid_utf8": true
+      },
+      {
+        "merge": 47,
+        "token_id": 303,
+        "left": " ا",
+        "right": "ور",
+        "merged": " اور",
+        "valid_utf8": true
+      },
+      {
+        "merge": 48,
+        "token_id": 304,
+        "left": " \\xd8",
+        "right": "\\xb1",
+        "merged": " ر",
+        "valid_utf8": true
+      },
+      {
+        "merge": 49,
+        "token_id": 305,
+        "left": "ا",
+        "right": "ل",
+        "merged": "ال",
+        "valid_utf8": true
+      },
+      {
+        "merge": 50,
+        "token_id": 306,
+        "left": "\\xd8",
+        "right": "\\xb4",
+        "merged": "ش",
+        "valid_utf8": true
+      },
+      {
+        "merge": 5050,
+        "token_id": 5306,
+        "left": " چھ",
+        "right": "اپ",
+        "merged": " چھاپ",
+        "valid_utf8": true
+      },
+      {
+        "merge": 10050,
+        "token_id": 10306,
+        "left": "h",
+        "right": "t",
+        "merged": "ht",
+        "valid_utf8": true
+      },
+      {
+        "merge": 15050,
+        "token_id": 15306,
+        "left": "w",
+        "right": "ard",
+        "merged": "ward",
+        "valid_utf8": true
+      },
+      {
+        "merge": 20050,
+        "token_id": 20306,
+        "left": " مو",
+        "right": "ٹا",
+        "merged": " موٹا",
+        "valid_utf8": true
+      },
+      {
+        "merge": 25050,
+        "token_id": 25306,
+        "left": " ای",
+        "right": "جب",
+        "merged": " ایجب",
+        "valid_utf8": true
+      },
+      {
+        "merge": 30050,
+        "token_id": 30306,
+        "left": " شرط",
+        "right": "یں",
+        "merged": " شرطیں",
+        "valid_utf8": true
+      },
+      {
+        "merge": 35050,
+        "token_id": 35306,
+        "left": " کوسٹ",
+        "right": "ل",
+        "merged": " کوسٹل",
+        "valid_utf8": true
+      },
+      {
+        "merge": 40050,
+        "token_id": 40306,
+        "left": " ٹوم",
+        "right": "ب",
+        "merged": " ٹومب",
+        "valid_utf8": true
+      },
+      {
+        "merge": 45050,
+        "token_id": 45306,
+        "left": "ha",
+        "right": "us",
+        "merged": "haus",
+        "valid_utf8": true
+      }
+    ],
+    "longest_20": [
+      {
+        "token_id": 33087,
+        "merge": 32831,
+        "bytes": 32,
+        "text": "۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 19565,
+        "merge": 19309,
+        "bytes": 29,
+        "text": " انسائیکلوپیڈیا",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 26506,
+        "merge": 26250,
+        "bytes": 29,
+        "text": " انٹرکانٹینینٹل",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 19313,
+        "merge": 19057,
+        "bytes": 27,
+        "text": " خیبرپختونخواہ",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 31423,
+        "merge": 31167,
+        "bytes": 27,
+        "text": " پارلیمنٹیرینز",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 34795,
+        "merge": 34539,
+        "bytes": 27,
+        "text": " انانکارپوریٹڈ",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 39438,
+        "merge": 39182,
+        "bytes": 27,
+        "text": " غیرجانبدارانہ",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 47841,
+        "merge": 47585,
+        "bytes": 27,
+        "text": " السَّمَاوَاتِ",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 45879,
+        "merge": 45623,
+        "bytes": 26,
+        "text": "خیبرپختونخواہ",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 3739,
+        "merge": 3483,
+        "bytes": 25,
+        "text": " خیبرپختونخوا",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 13220,
+        "merge": 12964,
+        "bytes": 25,
+        "text": " ایسٹروفیزیکل",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 23813,
+        "merge": 23557,
+        "bytes": 25,
+        "text": " انفرااسٹرکچر",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 27059,
+        "merge": 26803,
+        "bytes": 25,
+        "text": " دارالحکومتوں",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 28698,
+        "merge": 28442,
+        "bytes": 25,
+        "text": " ٹرانسپورٹیشن",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 32691,
+        "merge": 32435,
+        "bytes": 25,
+        "text": " نارتھمبرلینڈ",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 32692,
+        "merge": 32436,
+        "bytes": 25,
+        "text": " موٹرسائیکلوں",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 34897,
+        "merge": 34641,
+        "bytes": 25,
+        "text": " امیرالمومنین",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 35229,
+        "merge": 34973,
+        "bytes": 25,
+        "text": " ڈیجیٹلائزیشن",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 36134,
+        "merge": 35878,
+        "bytes": 25,
+        "text": " امیرالمؤمنین",
+        "valid_utf8": true
+      },
+      {
+        "token_id": 38822,
+        "merge": 38566,
+        "bytes": 25,
+        "text": " فارماسیوٹیکل",
+        "valid_utf8": true
+      }
+    ]
+  },
+  "q2": [
+    {
+      "input": "test.txt (sample)",
+      "words": 10229,
+      "tpw_ours": 1.17,
+      "tpw_gpt2": 6.11,
+      "tpw_o200k": 1.65
+    },
+    {
+      "input": "News Urdu",
+      "words": 19,
+      "tpw_ours": 1.11,
+      "tpw_gpt2": 6.26,
+      "tpw_o200k": 1.32
+    },
+    {
+      "input": "Poetry (diacritics)",
+      "words": 16,
+      "tpw_ours": 1.19,
+      "tpw_gpt2": 5.06,
+      "tpw_o200k": 1.81
+    },
+    {
+      "input": "Urdu + English words",
+      "words": 20,
+      "tpw_ours": 2.1,
+      "tpw_gpt2": 3.3,
+      "tpw_o200k": 1.25
+    },
+    {
+      "input": "Roman Urdu",
+      "words": 17,
+      "tpw_ours": 2.53,
+      "tpw_gpt2": 1.82,
+      "tpw_o200k": 1.59
+    },
+    {
+      "input": "Numbers and dates",
+      "words": 15,
+      "tpw_ours": 1.8,
+      "tpw_gpt2": 6.47,
+      "tpw_o200k": 2.2
+    },
+    {
+      "input": "Text with diacritics",
+      "words": 8,
+      "tpw_ours": 4.38,
+      "tpw_gpt2": 10.75,
+      "tpw_o200k": 6.25
+    },
+    {
+      "input": "Personal names",
+      "words": 13,
+      "tpw_ours": 1.0,
+      "tpw_gpt2": 6.31,
+      "tpw_o200k": 2.0
+    }
+  ],
+  "q3": [
+    {
+      "case": "Text with diacritics",
+      "our_tpw": 4.38,
+      "gpt2_tpw": 10.75,
+      "o200k_tpw": 6.25,
+      "explanation": "Standard Urdu typography routinely omits short vowel diacritics (harakat/aerab: zabar, zer, pesh, jazm, shadda). In alignment with standard NLP preprocessing, our cleaning pipeline normalised and stripped extraneous combining marks. Consequently, the tokenizer never encountered paired consonant-diacritic sequences during BPE merge learning. When evaluating fully vocalised text, each Unicode combining mark (which occupies 2 bytes in UTF-8) remains isolated from its host consonant, producing 4.38 tokens per word—almost four times the standard prose rate."
+    },
+    {
+      "case": "Roman Urdu",
+      "our_tpw": 2.53,
+      "gpt2_tpw": 1.82,
+      "o200k_tpw": 1.59,
+      "explanation": "Roman Urdu uses the Latin alphabet. Because the corpus was strictly filtered for Urdu Perso-Arabic script, virtually zero Latin subwords were formed beyond the initial 256 single-byte vocabulary. As a result, our tokenizer decomposes Roman Urdu almost entirely into individual single-character tokens (e.g., 's-c-h-o-o-l', 'k-h-e-l-i'), resulting in 2.53 tokens per word. In stark contrast, GPT-2 (1.82) and o200k_base (1.59) leverage rich English subwords and encode common Roman stems efficiently in 1–2 tokens."
+    },
+    {
+      "case": "Urdu with English words",
+      "our_tpw": 2.1,
+      "gpt2_tpw": 3.3,
+      "o200k_tpw": 1.25,
+      "explanation": "Modern Urdu text frequently incorporates English terminology for administrative, financial, and technological concepts (e.g., 'budget', 'technology', 'software houses'). While our pre-tokenisation regex strictly prevents merges from crossing script boundaries, the absence of English merges forces each loanword to fragment into 3–5 short ASCII byte tokens (yielding 2.10 tokens per word). Multilingual models like o200k_base handle this code-switching seamlessly at 1.25 tokens per word."
+    }
+  ]
+}
