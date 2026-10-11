@@ -1,6 +1,6 @@
 # Urdu BPE tokenizer from scratch
 
-CS417 Assignment 1 (NUST SEECS): collect and clean an Urdu corpus (Part A), implement byte-level
+CS417 Assignment 1: Collect and clean an Urdu corpus (Part A), implement byte-level
 BPE with a 50,000-token vocabulary (Part B), analyse it (Part C).
 
 ## Setup
